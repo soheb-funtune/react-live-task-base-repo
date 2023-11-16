@@ -27,7 +27,7 @@ const BarChar = () => {
               data: barData?.values,
               backgroundColor: ["Red", "Green", "Purple", "Orange"],
               maxBarThickness: 50,
-              //   borderWidth: 2,
+              borderWidth: 2,
               borderColor: "black",
               //   hoverBackgroundColor: "yellow",
               //   order: 1,

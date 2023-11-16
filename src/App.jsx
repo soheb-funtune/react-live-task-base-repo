@@ -12,6 +12,7 @@ function App() {
 
   return (
     <div>
+      <h1 style={{ paddingLeft: "30px" }}>ARCHITECH WE BUILD TECHNOLOGY</h1>
       <div className="container">
         <div>
           <h3>Category Disctribution </h3>
