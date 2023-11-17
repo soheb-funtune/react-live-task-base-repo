@@ -113,7 +113,34 @@ a {
 
 .fav-count {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
+.add-link {
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 1px 1px 5px lightgray;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: all ease-in-out 0.4s;
+}
+.add-link:hover {
+  transform: scale(1.02);
+}
+.add-link:hover .add-icon {
+  transform: rotate(360deg);
+}
+.add-link .add-icon {
+  font-size: 24px;
+  transition: all ease-in-out 1s;
+}
+
 .count {
   position: absolute;
   top: -8px;
@@ -123,4 +150,34 @@ a {
   background: red;
   color: white;
   font-size: 11px;
+}
+
+/* Add Component */
+
+.add-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.field-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.field-container input {
+  padding: 10px;
+}
+.field-container button {
+  margin-top: 20px;
+  padding: 10px;
 }
