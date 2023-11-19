@@ -1,0 +1,68 @@
+.table-header {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 20px;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+.single-task-item {
+  /* display: grid;
+  grid-template-columns: 4fr 0.5fr; */
+
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.checkbox-div {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 5px;
+}
+@media (max-width: 767px) {
+  .checkbox-div {
+    font-size: 13px;
+  }
+}
+.checkbox {
+  width: 0px;
+  height: 0px;
+}
+
+.checkmark {
+  overflow: hidden;
+  height: 5px;
+  width: 5px;
+  padding: 0.5px 9px;
+  border-radius: 100%;
+  margin-right: 5px;
+  position: relative;
+  transition: all ease-in-out 0.2s;
+  text-align: center;
+}
+.checkmark::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  border: 1px solid gray;
+  border-radius: 100%;
+  line-height: 1;
+}
+.checkbox:checked ~ .checkmark::after {
+  content: "✓";
+  background: orange;
+  border: 1px solid orange;
+  color: white;
+}
+
+.flex-div {
+  display: flex;
+  justify-content: end;
+}

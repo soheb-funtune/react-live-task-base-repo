@@ -8,6 +8,8 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 import SelectCompo from "../select-compo/select-compo";
 import SummaryCard from "../SummaryCard/SummaryCard";
 import OverAllProgress from "../OverAllProgress/OverAllProgress";
+import TodayTask from "../TodayTask/TodayTask";
+import WorkLoad from "../Workload/WorkLoad";
 const CardsHolder = () => {
   const firstCardsData = [
     {
@@ -51,6 +53,10 @@ const CardsHolder = () => {
       <div className="second-row">
         <SummaryCard />
         <OverAllProgress />
+      </div>
+      <div className="second-row">
+        <TodayTask />
+        <WorkLoad />
       </div>
     </div>
   );
