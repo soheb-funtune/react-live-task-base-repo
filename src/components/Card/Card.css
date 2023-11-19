@@ -1,0 +1,46 @@
+.card-container {
+  padding: 20px;
+  background: #f2eae5;
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-span {
+  padding: 7px 9px;
+  background: rebeccapurple;
+  display: inline;
+  width: fit-content;
+  border-radius: 100%;
+  line-height: 1;
+}
+
+.icon-span .icons {
+  color: white;
+}
+
+.card-container .title {
+  font-weight: 600;
+  color: gray;
+}
+.card-container .value {
+  font-weight: 600;
+  color: black;
+}
+.card-container p {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.card-container small {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 11px;
+}
+
+.arrow {
+  font-size: 14px !important;
+  color: lightgreen;
+}

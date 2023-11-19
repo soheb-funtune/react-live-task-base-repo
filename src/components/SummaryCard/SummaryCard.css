@@ -1,0 +1,77 @@
+.header-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-div h3 {
+  font-size: 16px;
+  margin: 0px;
+}
+.select-group-div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.table-body {
+  margin-top: 5px;
+}
+
+.table-headings,
+.single-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 0.5fr;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+.single-item {
+  margin-bottom: 0px;
+  align-items: center;
+}
+
+.table-headings b {
+  font-size: 13px;
+}
+.single-item span {
+  font-size: 12px;
+}
+.status-spna {
+  width: 90%;
+  text-align: center;
+  height: fit-content;
+  border-radius: 50px;
+  font-size: 13px;
+  padding: 0px;
+}
+
+.green {
+  background: rgba(146, 125, 92, 0.3);
+  color: green;
+}
+.orange {
+  background: rgba(255, 165, 0, 0.3);
+  color: orange;
+}
+.yellow {
+  background: rgba(255, 255, 0, 0.3);
+  color: #c0c004;
+}
+.red {
+  background: rgba(238, 41, 19, 0.3);
+  color: red;
+}
+
+.MuiBox-root {
+  background: transparent;
+}
+.MuiTypography-root {
+  padding: 2px;
+  line-height: 1;
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .header-div {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
