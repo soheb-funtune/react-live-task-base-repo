@@ -21,7 +21,7 @@
 .list-container span {
   font-size: 14px;
   margin-top: 6px;
-  text-align: center;
+  /* text-align: center; */
 }
 .list-container li {
   border-radius: 100%;
