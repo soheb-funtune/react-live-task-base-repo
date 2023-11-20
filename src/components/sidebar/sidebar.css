@@ -25,7 +25,8 @@
   height: 45px;
   padding: 8px 20px;
 }
-.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper,
+.css-o6liqr-MuiDrawer-docked .MuiDrawer-paper {
   color: white;
   background-color: black;
 }
