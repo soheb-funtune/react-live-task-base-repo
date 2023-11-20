@@ -1,3 +1,6 @@
+.all-container {
+  width: 100%;
+}
 .open-close-div {
   position: fixed;
   /* top: 13px;
@@ -60,9 +63,8 @@
 .header-div h2 {
   margin-top: 13px;
 }
-/* @media (max-width: 600px) {
-  .open-close-div {
-    top: 4px;
-    left: 36px !important;
+@media (max-width: 500px) {
+  .all-container {
+    width: auto;
   }
-} */
+}

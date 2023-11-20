@@ -176,7 +176,10 @@ export const SideBar = () => {
           ))}
         </List>
       </Drawer>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+      <div
+        className="all-container"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
         <Header />
         <Box
           component="main"
