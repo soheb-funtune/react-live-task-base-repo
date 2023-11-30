@@ -24,7 +24,7 @@ body {
   min-height: 100vh;
 }
 
-button {
+/* button {
   border: 1px solid;
   background: var(--secondary-color);
   padding: 5px 15px;
@@ -36,7 +36,7 @@ button:hover {
   border: 1px solid var(--secondary-color);
   color: var(--secondary-color);
   background-color: rgb(29, 14, 14);
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
