@@ -10,7 +10,11 @@ import { CiBellOn } from "react-icons/ci";
 import { CiSettings } from "react-icons/ci";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useMediaPredicate } from "react-media-hook";
+
 const Header = () => {
+  const lessthan767 = useMediaPredicate("(max-width: 767px)");
+
   return (
     <StyledHeader>
       <HeaderLeft>
@@ -19,25 +23,25 @@ const Header = () => {
           <Link to={"/"}>
             <label>
               <img src={header1} alt="logo" />
-              Overview
+              {!lessthan767 && "Overview"}
             </label>
           </Link>
           <Link to={"/transaction"}>
             <label>
               <img src={header2} alt="logo" />
-              Transaction
+              {!lessthan767 && "Transaction"}
             </label>
           </Link>
           <Link to={"/invoice"}>
             <label>
               <img src={header3} alt="logo" />
-              Invoice
+              {!lessthan767 && "Invoice"}
             </label>
           </Link>
           <Link to={"/activity"}>
             <label>
               <img src={header4} alt="logo" />
-              Activity
+              {!lessthan767 && "Activity"}
             </label>
           </Link>
         </>

@@ -8,6 +8,7 @@ import CircularProgress, {
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
+import { AreaChart } from "../charts/AreaChart";
 
 const BorderLinearProgress = styedMui(LinearProgress)(({ theme }) => ({
   height: 10,
@@ -46,7 +47,10 @@ const SecondRow = () => {
   ];
   return (
     <WrapperDiv>
-      <ChartDiv>Chart div</ChartDiv>
+      <ChartDiv>
+        <b>Money Flow</b>
+        <AreaChart />
+      </ChartDiv>
       <MySavings>
         <HeadingDiv>
           <b>My Savings</b>
@@ -82,7 +86,21 @@ const WrapperDiv = styled.div`
   }
 `;
 
-const ChartDiv = styled.div``;
+const ChartDiv = styled.div`
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  font-size: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  b {
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+  }
+`;
 
 const MySavings = styled.div`
   border: 1px solid lightgray;

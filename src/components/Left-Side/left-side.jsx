@@ -69,8 +69,8 @@ const WrapperDiv = styled.div`
   }
   @media (max-width: 667px) {
     img {
-      width: auto;
-      height: 115px;
+      width: 100%;
+      height: auto;
     }
   }
 `;
