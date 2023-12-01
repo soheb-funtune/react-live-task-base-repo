@@ -26,14 +26,14 @@ ChartJS.register(
 
 export const options = {
   responsive: true,
-  borderJoinStyle: "round",
+
   plugins: {
     legend: {
       position: "top",
     },
     title: {
       display: true,
-      text: "Chart.js Line Chart",
+      text: "Line Chart For Money Flow",
     },
   },
 };
@@ -46,7 +46,9 @@ export const data = {
   datasets: [
     {
       fill: true,
-      label: "Dataset 2",
+      borderJoinStyle: "round",
+      borderWidth: "3px",
+      label: "",
       data: [200, 443, 443, 622, 133, 533],
       borderColor: "rgb(53, 162, 235)",
       backgroundColor: "rgba(53, 162, 235, 0.5)",
