@@ -7,17 +7,22 @@ import Header from "./components/Header";
 import CheckboxCompo from "./components/CheckboxCompo";
 import TextForm from "./components/TextForm/TextForm";
 import MediaForm from "./components/MediaForm/MediaForm";
+import styled from "styled-components";
 const Layout = ({ children }) => {
-  return (
-    <div style={{ padding: "20px 30px", background: "#f6f6f6" }}>
-      {children}
-    </div>
-  );
+  return <LayoutStyle>{children}</LayoutStyle>;
 };
+
+const LayoutStyle = styled.div`
+  padding: 20px 30px;
+  background-color: white;
+  @media (max-width: 767px) {
+    padding: 10px 10px;
+  }
+`;
 
 function App() {
   return (
-    <div style={{ boxSizing: "border-box", width: "100%" }}>
+    <div>
       <BrowserRouter>
         <Header />
         <Layout>
