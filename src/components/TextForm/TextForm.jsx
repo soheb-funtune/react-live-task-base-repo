@@ -45,53 +45,56 @@ const TextForm = () => {
 
   return (
     <Wrapper onSubmit={(e) => handeSubmit(e)}>
-      <h4>Create Text & Media</h4>
-
-      <InputsContainer>
-        <div>
+      <div>
+        <InputsContainer single>
+          <h4>Create Text & Media</h4>
+        </InputsContainer>
+        <InputsContainer>
+          <div>
+            <LabeledInput
+              handelOnchange={handelOnchange}
+              formData={formData}
+              text={"Heading 01"}
+              placeholdeText={"Add a Heading that would Make users Interested"}
+            />
+            <LabeledInput
+              handelOnchange={handelOnchange}
+              formData={formData}
+              mTop={"10px"}
+              text={"Heading 02"}
+              placeholdeText={"Add a Heading that would Make users Interested"}
+            />
+          </div>
           <LabeledInput
             handelOnchange={handelOnchange}
             formData={formData}
-            text={"Heading 01"}
+            text={"Description 01"}
             placeholdeText={"Add a Heading that would Make users Interested"}
+            type={"textarea"}
           />
           <LabeledInput
             handelOnchange={handelOnchange}
             formData={formData}
-            mTop={"10px"}
-            text={"Heading 02"}
-            placeholdeText={"Add a Heading that would Make users Interested"}
+            text={"Bussiness Name"}
+            placeholdeText={"Add Your Bussiness Name"}
           />
-        </div>
-        <LabeledInput
-          handelOnchange={handelOnchange}
-          formData={formData}
-          text={"Description 01"}
-          placeholdeText={"Add a Heading that would Make users Interested"}
-          type={"textarea"}
-        />
-        <LabeledInput
-          handelOnchange={handelOnchange}
-          formData={formData}
-          text={"Bussiness Name"}
-          placeholdeText={"Add Your Bussiness Name"}
-        />
-        <LabeledInput
-          handelOnchange={handelOnchange}
-          formData={formData}
-          text={"Button Lebel"}
-          placeholdeText={"Select Lebel that best suit for your Button"}
-          type={"select"}
-        />
-      </InputsContainer>
-      <InputsContainer single>
-        <LabeledInput
-          handelOnchange={handelOnchange}
-          formData={formData}
-          text={"Website URL"}
-          placeholdeText={"Add the URL of Landing Page"}
-        />
-      </InputsContainer>
+          <LabeledInput
+            handelOnchange={handelOnchange}
+            formData={formData}
+            text={"Button Lebel"}
+            placeholdeText={"Select Lebel that best suit for your Button"}
+            type={"select"}
+          />
+        </InputsContainer>
+        <InputsContainer single>
+          <LabeledInput
+            handelOnchange={handelOnchange}
+            formData={formData}
+            text={"Website URL"}
+            placeholdeText={"Add the URL of Landing Page"}
+          />
+        </InputsContainer>
+      </div>
       <ButtonDiv>
         <StyledButton
           handleClick={() => navigate(`/ads`)}
@@ -116,9 +119,8 @@ export default TextForm;
 const Wrapper = styled.form`
   background-color: #ffff;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  position: relative;
-
   padding: 20px;
   box-sizing: border-box;
   min-height: 80vh;
@@ -137,6 +139,10 @@ const InputsContainer = styled.div`
   grid-template-columns: ${({ single }) => (single ? "1fr" : "1fr 1fr")};
   column-gap: 20px;
   row-gap: 10px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ButtonDiv = styled.div`
@@ -144,7 +150,4 @@ const ButtonDiv = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
 `;

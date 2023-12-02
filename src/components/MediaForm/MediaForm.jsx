@@ -174,6 +174,10 @@ const InputsContainer = styled.div`
   grid-template-columns: ${({ single }) => (single ? single : "1fr 1fr")};
   column-gap: 20px;
   row-gap: 10px;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const ButtonDiv = styled.div`

@@ -21,7 +21,7 @@ const LabeledInput = ({
         onChange={(e) => handelOnchange(e)}
         type={"text"}
         rows="6"
-        cols="50"
+        // cols="50"
         placeholder={placeholdeText}
       />
     </Wrapper>
@@ -62,7 +62,8 @@ const Wrapper = styled.div`
   box-sizing: border-box;
   gap: 5px;
   width: 100%;
-
+  box-sizing: border-box;
+  overflow: hidden;
   label {
     font-size: 13px;
     font-weight: 400;
@@ -77,4 +78,7 @@ const Wrapper = styled.div`
     border-radius: 0px;
     border: 1px solid lightgray;
   }
+  /* @media (max-width: 385px) {
+    max-width: 85%;
+  } */
 `;
