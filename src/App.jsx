@@ -1,15 +1,28 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import Header from "./components/DashBoard-Header/Header";
+import Main from "./components/Main/Main";
+import Transaction from "./Pages/transaction";
+import Invoice from "./Pages/invoice";
+import Activity from "./Pages/activity";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div>
-      <h1> Ready to code MODE</h1>
-      <button>Button</button>
+    <div
+      style={{ padding: "10px 20px", boxSizing: "border-box", width: "100%" }}
+    >
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/transaction" element={<Transaction />} />
+          <Route path="/invoice" element={<Invoice />} />
+          <Route path="/activity" element={<Activity />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
